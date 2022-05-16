@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>số nhỏ nhất trong một mảng</title>
+</head>
+<body>
+    <p> Nhap mang </p>
+    <button type="button" onclick="addArray()">Nhap mang</button>
+    <p id="arr1"></p>
+    <div id="result"></div>
+    <script>
+        const arr = [];
+        function addArray() {
+            arr[0] = +prompt('nhap so :'); 
+            arr[1] = +prompt('nhap so :');
+            arr[2] = +prompt('nhap so :');
+            arr[3] = +prompt('nhap so :');
+            arr[4] = +prompt('nhap so :');
+            document.getElementById('arr1').innerHTML = 'các chữ số :' + arr;
+            testArray();
+        }
+        function testArray() {
+            let biggest = arr[0]; // biến biggest được đặt thành phần tử đầu tiên của arr và vòng lặp sẽ lặp lại qua mảng
+            for (let i = 0; i < arr.length; i++) {
+                if(arr[i] < biggest) {
+                    biggest = arr[i];
+                }                    
+            }
+            document.getElementById('result').innerHTML = 'giá trị nhỏ nhất trong mảng là :' +  biggest;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tổng số chẵn trong một hàm</title>    
+</head>
+<body>
+    <p>Nhap mang</p>
+    <button type="button" onclick="addArray()">Nhap mang</button>
+    <button type="button" onclick="reverseArray()">Doi chieu</button>
+    <script>
+        const arr = [];
+        function addArray() {
+            for (let i = 0; i < 3; i++) {
+                arr[i] = +prompt(`Nhap 3 so a, b, c ${i}:`)
+            }
+            alert(`3 so a, b, c da nhap la: ${JSON.stringify(arr)}`)
+        }
+        function reverseArray() {
+            let temp = [];         
+            temp = arr[0];
+            arr[0] = arr[1];          
+            arr[1] = arr[2];
+            arr[2] = temp;  
+            alert(`sau khi đổi chỗ 3 số a, b, c  : ${JSON.stringify(arr)}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tính luật  giá nhà nghỉ ở Hà Nội</title>
+</head>
+<body>
+    <form name="demo">
+        <input type="number" name="in" placeholder="Giờ vào">
+        <input type="number" name="out" placeholder="Giờ ra">
+        <button type="button" value="Submit" onclick="myFunction()">Submit</button>
+    </form>
+
+    <script>
+        let firstly;
+        let final;
+        let pay = 0;
+        function myFunction() {
+            firstly = parseInt(document.forms['demo']['in'].value); // Phương thức parseInt() sẽ phân tích một chuỗi và trả về một số nguyên nếu có thể.
+            final = parseInt(document.forms['demo']['out'].value);            
+            elementArray();
+        }
+
+        function elementArray() {
+            if ((final >= 25) || (firstly >= 25)) {
+                alert('Nhập lại');
+            } else {
+                if ((firstly >= 1) && (final <= 8) && (final > firstly)) {
+                    pay += 160;
+                    console.log(pay);
+                } else {
+                    if ((8 > firstly >= 1) && (final > 8) && (final > firstly)) {
+                        pay = (final - 8) * 40 + 160;
+                        console.log(pay);
+                    } else { 
+                        if ((8 < firstly) && (final > firstly) && (final - firstly) <= 2) {
+                            pay = (final - firstly) * 70;
+                            console.log(pay);
+                        } else {
+                            if ((8 < firstly) && (final > firstly) && (final - firstly) > 2) {
+                                pay = (final - firstly) * 50 + 40;
+                                console.log(pay);
+                            } else {
+                                if ((firstly > final) && (8 < firstly) && (firstly - final) < 24 ) {
+                                    pay = ((24 - firstly) * 50 + 200 + ((final - 8) * 40));
+                                    console.log(pay);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

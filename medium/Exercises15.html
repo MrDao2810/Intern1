@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form name="demo">
+        <input type="number" name="in" placeholder="nhap so">
+        <button type="button" value="submit" onclick="myFunction()">Submit</button>
+    </form>
+
+    <script>
+        let nRem = 0;
+        let nSum = 0;
+        let nInput;
+        function myFunction() {
+            nInput = parseInt(document.forms['demo']['in'].value);
+            resultArray();
+        }
+
+        function resultArray() {
+            while (nInput !== 0) {
+                nRem = nInput % 10;
+                nSum += nRem;
+                nInput = Math.floor(nInput/10);   
+            }
+            console.log(nSum);
+        }
+    </script>
+</body>
+</html>

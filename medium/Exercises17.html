@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function resultArray(str, start,end) {
+            let res = '';
+            console.log(str);
+            for (let i = start; i < end; i++) {
+                res += str[i];
+            } 
+            return res;  
+        }
+
+        const test = 'Hom nay toi nghi';
+        alert('KQ: ' + resultArray(test, 2, 4));
+    </script>
+</body>
+</html>

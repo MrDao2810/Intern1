@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form name="demo">
+        <input type="number"  name="in" placeholder="so tien">
+        <button type="button" value="Submit" onclick="myFunction()">Submit</button>
+        <h1 id="result"></h1>
+    </form>
+    <script>
+        let tax;
+        function myFunction() {
+            tax = parseInt(document.forms['demo']['in'].value);
+            resultArray();
+        }
+
+        function resultArray() {
+            if (tax < 20000000) {
+                tax *= 0.05;
+                console.log(tax);
+            } else if (20000000 <= tax && tax <= 50000000) {
+                tax *= 0.1;
+                console.log(tax);
+            } else if (50000000 < tax) {
+                tax *= 0.2;
+                console.log(tax);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> In mảng</title>
+</head>
+<body>
+    <form name="demo">
+        <input type="text" name="so1" placeholder="nhap số dau:">
+        <input type="text" name="so2" placeholder="nhap số cuoi:">
+        <input type="button" value="Kết quả" onclick="myFunction()">
+        <h1 id="ketqua1"></h1>
+        <h1 id="ketqua2"></h1>
+    </form>
+    <script>
+        function myFunction() {
+            var start = parseInt(document.forms['demo']['so1'].value); // Phương thức parseInt() sẽ phân tích một chuỗi và trả về một số nguyên nếu có thể.
+            var end = parseInt(document.forms['demo']['so2'].value);
+            document.getElementById('ketqua1').innerHTML = takeArray(start, end);
+        }
+        
+        function takeArray(start, end) {
+            if (start > end) {
+                var result = new Array(start - end + 1);
+                for (let i = 0; i < result.length; i++, start--) {
+                    result[i] = start;
+                }
+                return result;
+            } else {
+                var arr1 = new Array(end - start + 1);
+                for (let j = 0; j < arr1.length; j++, start++) {
+                    arr1[j] = start;
+                }
+                return arr1;
+            }
+        }
+    </script>
+</body>
+</html>

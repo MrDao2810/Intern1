@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sắp xếp mảng theo thứ tự giảm dần hoặc tăng dần</title>
+</head>
+<body>   
+    <p>nhap mang</p>
+    <button type="button" onclick="adArray()">Nhap Mang</button>
+    <button type="button" onclick="reducedArray()">Tang dan</button>
+    <button type="button" onclick="increaseArray(callback)">Giam dan</button>
+    <script>
+
+        function callback(a, b) {
+            return a - b;
+        }
+
+        let array = [];
+        function adArray() {   
+            let n = +prompt('Nhap so luong phan tu mang: ');
+            for (let i = 0; i < n; i++) {
+                array[i] = +prompt(`Nhap so phan tu thu ${i}: `)
+            }
+            alert(`Mang da nhap la : ${JSON.stringify(array)}`);                
+        }
+
+        function reducedArray() {
+            for (let i = 0; i < array.length; i++) {
+                for (let j = i + 1; j < array.length; j++) {
+                    if (array[j] < array[i]) {
+                        const temp = array[j];
+                        array[j] = array[i];
+                        array[i] = temp;
+                    }
+                }
+            } 
+            alert(`Mang theo thu tu tang dan la: ${JSON.stringify(array)}`);
+        }
+
+        function increaseArray(callback1) {
+            for (let i = 0; i < array.length; i++) {
+                for (let j = i + 1; j < array.length; j++) {
+                    if (callback1(array[j], array[i])) {
+                        const temp = array[j];
+                        array[j] = array[i];
+                        array[i] = temp;
+                    }
+                }
+            } 
+            alert(`mang theo thu tu giam dan la: ${JSON.stringify(array)}`);
+        }
+        
+    </script>
+</body>
+</html>

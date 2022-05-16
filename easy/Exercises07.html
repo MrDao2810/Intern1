@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng số lẻ trong một hàm</title>    
+</head>
+<body>
+    <p>Nhap mang</p>
+    <button type="button" onclick="addArray()">Nhap mang</button>
+    <p id="arr1"></p>
+    <div id="chime"></div>
+    <div id="odd"></div>
+    
+    <script>
+        const arr = [];
+        function addArray() {
+            arr[0] = +prompt('nhap so :'); 
+            arr[1] = +prompt('nhap so :');
+            arr[2] = +prompt('nhap so :');
+            arr[3] = +prompt('nhap so :');
+            arr[4] = +prompt('nhap so :');
+            document.getElementById('arr1').innerHTML = 'các chữ số nguyên: ' + arr;
+            testArray();
+        }
+
+        function testArray() {
+            let odd1 = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 !== 0) {
+                    odd1 += arr[i];
+                } else {
+                }
+            }
+            document.getElementById('odd').innerHTML ='Tong cac so le trong mang la:' + odd1;
+        }
+    </script>
+</body>
+</html>

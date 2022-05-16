@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra 1 so co phai so nguyen to hay khong</title>
+</head>
+<body>
+    <p>Nhập số</p>
+    <button type="button" onclick="addArray()">Nhap mang</button>
+    <button type="button" onclick="testArray()">Kiem tra</button>
+    <script>
+        let arr = [];
+        function addArray() {
+            arr[0] = +prompt('nhap so :'); 
+            console.log(`So da nhap la: ${JSON.stringify(arr)}`);
+            testArray();
+        }
+
+        function testArray() {
+            let arr1 = arr[0];
+            if (arr1 < 2) {
+                alert(`${JSON.stringify(arr)} khong phai so nguyen to : `);
+            } else {
+                for (let x = 2; x < arr1-1; x++) {
+                    if ( arr1 % x === 0) {
+                        alert(`${JSON.stringify(arr)} khong phai so nguyen to : `);
+                        break;
+                    } else {
+                        alert(`${JSON.stringify(arr)} la so nguyen to : `);
+                        break;
+                    }
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

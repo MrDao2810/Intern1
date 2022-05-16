@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Tìm vị trí chuỗi trong mảng</title>
+</head>
+<body>
+    <p>Nhập mảng</p>
+    <button type="button" onclick="addArray()">Nhap mang </button>
+    <button type="button" onclick="findArray()"> Tim </button>
+    <script>
+        let array = [];
+        let array1 = []; 
+        function addArray() {                  
+            array1 = prompt(`Nhap mang dau tien : `)
+            array = prompt(`Nhap mang tim : `)
+            console.log(`Mang b da nhap la : ${JSON.stringify(array1)}`);               
+        }
+
+        function findArray() {
+            let arr = array1.search(array);
+            console.log(arr);
+        }
+        
+    </script>
+</body>
+</html>

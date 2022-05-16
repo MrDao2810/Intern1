@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kiểm tra số chẵn lẻ</title>
+</head>
+<body>
+    <form name="chimeodd">
+        <input type="text" name="so1" placeholder="Nhập số a:">
+        <input type="text" name="so2" placeholder="Nhập số b:">
+        <input type="button" value="Kết quả" onclick="chimeOdd()">
+        <h1 id="ketqua1"></h1>
+        <h1 id="ketqua2"></h1>
+    </form>
+    <script>
+        function chimeOdd() {
+            var so1 = parseInt(document.forms['chimeodd']['so1'].value); // Phương thức parseInt() sẽ phân tích một chuỗi và trả về một số nguyên nếu có thể.
+            var so2 = parseInt(document.forms['chimeodd']['so2'].value);
+            //Thay đổi nội dung của thẻ có id = ketqua1
+            document.getElementById('ketqua1').innerHTML = testArray(so1);   
+            document.getElementById('ketqua2').innerHTML = testArray(so2);
+        }
+
+        function testArray(x) {
+            if (x % 2 === 0) {
+                return x + 'là số chẵn'; 
+            } else {
+                return x + 'là số lẻ';
+            }
+        }    
+</script>
+</body>
+</html>

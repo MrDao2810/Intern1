@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>bai so 9</title>
+</head>
+<body>
+    <p> Nhap 2 so </p>
+    <button type="button" onclick="addNumber()">Nhap so</button>
+    <p id="arr1"></p>
+    <script>
+        const arr = [];
+        function addNumber() {
+            arr[0] = +prompt('nhap so a :'); 
+            arr[1] = +prompt('nhap so b :');
+            document.getElementById('arr1').innerHTML = Math.floor( arr[0] / arr[1] );
+        }
+    </script>
+</body>
+</html>

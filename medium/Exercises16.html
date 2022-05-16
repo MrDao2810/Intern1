@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form name="demo">
+        <input type="number" id="in" onchange="addNumber()">
+        <button type="button" value="submit" onclick="resultArray()">Submit</button>
+    </form>
+    <script>
+        let num = [];
+        function addNumber() {
+            num = + document.getElementById('in').value;
+        }
+
+        function resultArray() {
+            let arr = [];
+            for (let i = 0; i < num; i++) {
+                arr.push(resultFibonacci(i));
+            }
+            alert(`day so fibo nhan duoc la :${arr}`);                  
+        }
+
+        function resultFibonacci(n) {
+            let f0 = 0;
+            let f1 = 1;
+            let fn = 1;
+            if (n < 0) {
+                return -1;
+            } else if (n === 0 || n === 1) {
+                return n;
+            } else {
+                for (let i = 2; i < n; i++) {
+                    f0 = f1;
+                    f1 = fn;
+                    fn = f0 + f1;
+                }
+            } 
+            return fn;
+        }
+    </script>
+</body>
+</html>

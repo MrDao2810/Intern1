@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Tìm vị trí chuỗi trong mảng</title>
+</head>
+<body>
+    <p>Nhập mảng</p>
+    <button type="button" onclick="addNumber()">Nhap so </button>
+    <button type="button" onclick="findArray()"> Tim </button>
+    <p id="demo"></p>
+    <script>
+        let arr = [];
+        function addNumber() {                  
+            arr[0] = +prompt(`Nhap so -a : `);
+            arr[1] = +prompt(`Nhap so a : `);                                 
+        }
+        
+        function findArray() {
+            document.getElementById('demo').innerHTML = Math.floor(Math.random() * (arr[1] - arr[0] + 1)) + arr[0];                
+        }      
+    </script>
+</body>
+</html>

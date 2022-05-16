@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Viết hàm theo thứ tự đảo ngược</title>
+</head>
+<body>
+    <p>Nhập mảng</p>
+    <button type="button" onclick="addArray()">Nhap mang</button>
+    <button type="button" onclick="testArray()"> Dao chieu cua mang</button>
+    <script>
+        let array = [];
+        function addArray() {   
+            let n = +prompt('Nhap so luong phan tu: ');
+            for (let i = 0; i < n; i++) {
+                array[i] = +prompt(`Nhap so phan tu thu ${i}: `);
+            }
+            alert(`Mang da nhap la : ${JSON.stringify(array)}`);                
+        }
+
+        function testArray() {
+            let arr1 = [];
+            for(let i = array.length - 1; i >= 0; i--) {
+                arr1.push(array[i]);
+            }
+            alert(`Mang dao chieu la : ${JSON.stringify(arr1)}`);
+        }
+    </script>
+</body>
+</html>

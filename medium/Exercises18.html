@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function resultArray(str, start, count) {
+            let res = '';
+            console.log(str);
+            for (let i = start; i < start + count; i++) {
+                res = res + str[i];
+            } 
+            return res;  
+        }
+
+        const test = 'Homnaytoinghi';
+        alert('KQ: ' + resultArray(test, 3, 3));
+    </script>
+</body>
+</html>

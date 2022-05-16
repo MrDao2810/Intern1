@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <form>
+        <table style="margin: auto;">   
+            <tr>
+                <td>
+                    Nhập số a:
+                </td>
+                <td>
+                    <input type="number" id="a">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nhập số b:
+                </td>
+                <td>
+                    <input type="number" id="b">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input onclick="send()" type="button" value="Submit">
+                </td>
+            </tr>          
+        </table>
+    </form>
+    <script>
+        function send() {
+            var arr = document.getElementsByTagName('input');
+            var a = arr[0].value;
+            var b = arr[1].value;    
+            console.log(Math.pow(a, b));    
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Chia 2 mảng</title>
+</head>
+<body>
+    <p>Nhập mảng</p>
+    <button type="button" onclick="addArray1()">Nhap mang a</button>
+    <button type="button" onclick="addArray2()">Nhap mang b</button>
+    <button type="button" onclick="shareArray()"> chia Mang</button>
+    <script>
+        let array = [];
+        let array1 = []; 
+        function addArray1() {                  
+            let n = +prompt('Nhap so luong phan tu: ');
+            for (let i = 0; i < n; i++) {
+                array[i] = +prompt(`Nhap so phan tu thu ${i}: `)
+            }
+            console.log(`Mang a da nhap la : ${JSON.stringify(array)}`);                
+        }
+        
+        function addArray2() {                  
+            let n = +prompt('Nhap so luong phan tu: ');
+            for (let i = 0; i < n; i++) {
+                array1[i] = +prompt(`Nhap so phan tu thu ${i}: `)
+            }
+            console.log(`Mang b da nhap la : ${JSON.stringify(array1)}`);               
+        }
+
+        function shareArray() {
+            let x = 0;
+            let ctr = 0;
+            let result = [];
+            while (ctr < array.length && ctr < array1.length) {
+                result.push(array[ctr] / array1[ctr]);
+                ctr++;
+            }
+            if (ctr === array.length) {
+                for (x = ctr; x < array1.length; x++) {
+                    result.push(array1[x]);
+                }
+            } else {
+                for (x = ctr; x < array.length; x++) {
+                    result.push(array[x]);
+                }
+            }
+            console.log(`chia 2 mang : ${JSON.stringify(result)}`);
+        }
+    </script>
+</body>
+</html>

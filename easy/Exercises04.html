@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>bai so 4</title>
+</head>
+<body>
+    <p> Nhap mang </p>
+    <button type="button" onclick="addArray()">Nhap mang</button>
+    <p id="arr1"></p>
+    <div id="ketqua"></div>
+    <script>
+        const arr = [];
+        function addArray() {
+            arr[0] = +prompt('nhap so :'); 
+            arr[1] = +prompt('nhap so :');
+            arr[2] = +prompt('nhap so :');
+            arr[3] = +prompt('nhap so :');
+            arr[4] = +prompt('nhap so :');
+            document.getElementById('arr1').innerHTML = arr;
+            testArray();
+        }   
+
+        function testArray() {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if(arr[i] % 2 === 0) 
+                    count++;
+            }
+            document.getElementById('ketqua').innerHTML = 'Số lượng các số chẵn là :' + count;
+        }
+        
+    </script>
+</body>
+</html>

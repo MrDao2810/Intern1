@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>bai so 4</title>
+</head>
+<body>
+    <p> Tinh giai thua cua mot so</p>
+    <button type="button" onclick="addNumber()">Nhap So</button>
+    <button type="button" onclick="countFactorial()">Tinh giai thua</button>
+    <script>
+        const arr = [];
+        function addNumber() {
+            arr[0] = +prompt('nhap so :'); 
+            console.log(`Mang da nhap la : ${JSON.stringify(arr)}`);
+        }
+        
+        function countFactorial() {
+            let arr1 = arr[0];
+            let result = 1;
+            if (arr1 > 1) {
+                for (let i = 1; i <= arr1; i++) {
+                    result = result * i;
+                } console.log(`Giai thua cua so la : ${JSON.stringify(result)}`);
+            } else {
+                console.log('n has to be positive');
+            }
+        }
+    </script>
+</body>
+</html>

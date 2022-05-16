@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Nối 2 mảng</title>
+</head>
+<body>
+    <p>Nhập mảng</p>
+    <button type="button" onclick="addArray1()">Nhap mang a</button>
+    <button type="button" onclick="addArray()">Nhap mang b</button>
+    <button type="button" onclick="connectArray()"> Noi Mang</button>
+    <script>
+        let array = [];
+        let array1 = []; 
+        let obj = [];
+        let res = [];
+        
+        function addArray1() {                  
+            let n = +prompt('Nhap so luong phan tu: ');
+            for (let i = 0; i < n; i++) {
+                array[i] = +prompt(`Nhap so phan tu thu ${i}: `)
+            }
+            console.log(`Mang a da nhap la : ${JSON.stringify(array)}`);                
+        }
+        
+        function addArray() {                  
+            let n = +prompt('Nhap so luong phan tu: ');
+            for (let i = 0; i < n; i++) {
+                array1[i] = +prompt(`Nhap so phan tu thu ${i}: `);
+            }
+            console.log(`Mang b da nhap la : ${JSON.stringify(array1)}`);               
+        }
+
+        function connectArray() {
+            for (let i = array.length - 1; i >= 0; --i) 
+                obj[array[i]] = array[i];
+            for (let j = array1.length - 1; j >= 0; -- j)
+                obj[array1[j]] = array1[j];
+            for (var n in obj) {
+                if (obj.hasOwnProperty(n))
+                    res.push(obj[n]);
+            }
+            console.log(res);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>số lẻ trong một mảng</title>
+</head>
+<body>
+    <p> Add mang </p>
+    <button type = "button" onclick = "addArray()">Add mang</button>
+    <p id="arr1"></p>
+    <div id="ketqua"></div>
+    <script>
+        const arr = [];
+        function addArray() {
+            arr[0] = +prompt('Add so :'); 
+            arr[1] = +prompt('Add so :');
+            arr[2] = +prompt('Add so :');
+            arr[3] = +prompt('Add so :');
+            arr[4] = +prompt('Add so :');
+            document.getElementById('arr1').innerHTML = 'các chữ số nguyên:' + arr;
+            testArray();
+        }
+
+        function testArray() {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if(arr[i] % 2 !== 0) 
+                    count++;
+            }
+            document.getElementById('ketqua').innerHTML = 'Số lượng các số lẻ là :' +  count;
+        }
+    </script>
+</body>
+</html>

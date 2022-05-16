@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Tinh tong so cac phan tu chuoi</title>
+</head>
+<body>
+    <p>Nhập mảng</p>
+    <button type="button" onclick="addArray1()">Mảng</button>
+    <button type="button" onclick="addArray2()">Nhập chuỗi cần tìm</button>
+    <button type="button" onclick="totalElement()"> Tìm Mang</button>
+    <script>
+        let array = [];
+        let array1 = []; 
+        let element ;
+        function addArray2() {                  
+            let n = +prompt('Nhap so luong phan tu: ');
+            for (let i = 0; i < n; i++) {
+                array[i] = +prompt(`Nhap so phan tu thu ${i}: `);
+            }
+            console.log(`Chuoi can tim : ${JSON.stringify(array)}`);                
+        }
+        
+        function addArray1() {                  
+            let n = +prompt('Nhap so luong phan tu: ');
+            for (let i = 0; i < n; i++) {
+                array1[i] = +prompt(`Nhap so phan tu thu ${i}: `);
+            }
+            console.log(`Mang : ${JSON.stringify(array1)}`);               
+        }
+
+        function totalElement() {
+            element = 0;
+            for(let j = 0; j < array.length; j++) { 
+                for (let i = 0; i < array1.length; i++) {
+                    if (array[j] === array1[i]) {
+                        break;
+                    }
+                    if (j === array.length - 1) {
+                        if (array[j] !== array1[i]) {
+                            element += 1;
+                        }
+                    }
+                                            
+                }
+            }
+            console.log(`Tong so lan xuat hien cua chuoi a la : ${JSON.stringify(element)}`);
+        }
+            
+    </script>
+</body>
+</html>
