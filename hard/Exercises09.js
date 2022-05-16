@@ -3,6 +3,7 @@ function searchWord(text, word) {
     let y = 0;   
     for (let i = 0; i < text.length; i++) {
         if(text[i] === word[0]) {
+            y = 0;
             for(let j = i; j < i + word.length; j++) {
                 if(text[j] === word[j - i]) {
                     y++;
@@ -11,7 +12,6 @@ function searchWord(text, word) {
                     x++;
                 }
             }
-            y = 0;
         }
     }
     return "'" + word + "' xuat hien " + x + " lan.";
