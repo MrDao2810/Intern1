@@ -1,19 +1,19 @@
-function searchWord(text, word) {    
+function searchWord(text, str) {    
     let x = 0; 
     let y = 0;   
     for (let i = 0; i < text.length; i++) {
-        if(text[i] === word[0]) {
+        if(text[i] === str[0]) {
             y = 0;
-            for(let j = i; j < i + word.length; j++) {
-                if(text[j] === word[j - i]) {
+            for(let j = i; j < i + str.length; j++) {
+                if(text[j] === str[j - i]) {
                     y++;
                 }
-                if (y === word.length) {
+                if (y === str.length) {
                     x++;
                 }
             }
         }
     }
-    return "'" + word + "' xuat hien " + x + " lan.";
+    return "'" + str + "' xuat hien " + x + " lan.";
 }
-console.log(searchWord('that su hom nay em rat muon nghi nhung em khong co tien nen em lai di lam kiem tien', 'em'));
+console.log(searchWord('aaaa sd aa a', 'aa'));
